@@ -1,0 +1,30 @@
+
+/* Columns spacing */
+.vc_row.vc_column-gap-40 > .vc_column_container { padding: 20px; }
+.vc_row.vc_column-gap-50 > .vc_column_container { padding: 25px; }
+.vc_row.vc_column-gap-60 > .vc_column_container { padding: 30px; }
+.vc_row.vc_column-gap-70 > .vc_column_container { padding: 35px; }
+.vc_row.vc_column-gap-80 > .vc_column_container { padding: 40px; }
+.vc_row.vc_column-gap-90 > .vc_column_container { padding: 45px; }
+.vc_row.vc_column-gap-100 > .vc_column_container { padding: 50px; }
+.vc_row.vc_column-gap-110 > .vc_column_container { padding: 55px; }
+.vc_row.vc_column-gap-120 > .vc_column_container { padding: 60px; }
+.vc_row.vc_column-gap-130 > .vc_column_container { padding: 65px; }
+.vc_row.vc_column-gap-140 > .vc_column_container { padding: 70px; }
+.vc_row.vc_column-gap-150 > .vc_column_container { padding: 75px; }
+
+
+/** Empty space addon */
+.empty-space { display: none; width: 100%; height: 0; }
+
+@media (max-width: 767px) {
+  .empty-space-mobile { display: block; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .empty-space-tablet { display: block; }
+}
+
+@media (min-width: 1025px) {
+  .empty-space-desktop { display: block; }
+}

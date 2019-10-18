@@ -1,0 +1,12 @@
+/** Empty space addon */
+.wpb_empty_space { text-align: center; }
+.wpb_empty_space .wpb_element_wrapper { background: none; }
+.wpb_empty_space .vc_custom-element-container p { margin: 0 0 10px 0; }
+.wpb_empty_space .vc_custom-element-container span {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 5px 10px;
+  background: #e6e6e6;
+  border-radius: 2px;
+}
+.wpb_empty_space .vc_custom-element-container span i { margin-right: 5px; }
