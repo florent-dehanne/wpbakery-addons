@@ -10,7 +10,7 @@
 		'icon' => WPBAKERY_ADDONS_URL.'/assets/images/addons/empty-space.svg',
   	'content_element' => true,
 		'category' => 'WPBakery Addons',
-		'custom_markup' => getView('views/addons-preview/empty-space.php'),
+		'custom_markup' => getAddonView('views/addons-preview/empty-space.php'),
     'js_view' => 'VcCustomElementView',
   	'params' => [
   		[

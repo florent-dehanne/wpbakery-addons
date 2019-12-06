@@ -10,7 +10,7 @@
 		'icon' => WPBAKERY_ADDONS_URL.'/assets/images/addons/share-social-medias.svg',
   	'content_element' => true,
 		'category' => 'WPBakery Addons',
-		'custom_markup' => getView('views/addons-preview/share-social-medias.php'),
+		'custom_markup' => getAddonView('views/addons-preview/share-social-medias.php'),
     'js_view' => 'VcCustomElementView',
   	'params' => [
   		[

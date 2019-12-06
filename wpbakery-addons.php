@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.0
+ * Version: 1.1
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -106,7 +106,7 @@
         'height_mobile' => '20px'
       ], $atts);
 
-      return getView('views/addons-render/empty-space.php', $atts);
+      return getAddonView('views/addons-render/empty-space.php', $atts);
     } // addonEmptySpaceRender()
 
     function addonShareOnSocialMediasRender($atts, $content = null)
@@ -127,7 +127,7 @@
       $atts['share_url'] = add_query_arg($wp->query_vars, home_url($wp->request));
       $atts['share_picture'] = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
-      return getView('views/addons-render/share-social-medias.php', $atts);
+      return getAddonView('views/addons-render/share-social-medias.php', $atts);
     }
   }
 
