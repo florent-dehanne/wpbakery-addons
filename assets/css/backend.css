@@ -10,3 +10,13 @@
   border-radius: 2px;
 }
 .wpb_empty_space .vc_custom-element-container span i { margin-right: 5px; }
+
+
+/** Simple slider addon */
+@media (min-width: 992px) {
+  .simple-slider-backend-column {
+    width: 50% !important;
+    padding-top: 0 !important;
+    margin-bottom: 20px;
+  }
+}

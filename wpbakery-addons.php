@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.1
+ * Version: 1.2
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -15,8 +15,9 @@
 
   class WPBakery_addons {
 
-    // Plugin version.
+    // Plugin version
     public $version;
+
     public $wpbakery;
     public $wpbakeryPluginName = 'js_composer/js_composer.php';
 
@@ -49,9 +50,15 @@
       wp_enqueue_script('wpbakery-addons-backend', WPBAKERY_ADDONS_URL.'assets/js/backend.js', [], $this->version, true);
     }
 
-    function loadFrontendAssets() {
+    function loadFrontendAssets()
+    {
       wp_enqueue_style('wpbakery-addons', WPBAKERY_ADDONS_URL.'assets/css/frontend.css', [], $this->version);
       wp_enqueue_script('wpbakery-addons', WPBAKERY_ADDONS_URL.'assets/js/frontend.js', [], $this->version, true);
+
+      // OwlCarousel 2
+      wp_enqueue_style('owl-carousel-2', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', [], '2.3.4');
+      wp_enqueue_style('owl-carousel-2-theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', [], '2.3.4');
+      wp_enqueue_script('owl-carousel-2', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', [], '2.3.4');
     } // loadFrontendAssets()
 
     /** If WPBakery is not installed, a notice is displayed. */
@@ -64,6 +71,7 @@
     {
       vc_lean_map('empty_space', null, WPBAKERY_ADDONS_PATH.'/inc/empty-space.php');
       vc_lean_map('share_social_medias', null, WPBAKERY_ADDONS_PATH.'/inc/share-social-medias.php');
+      vc_lean_map('simple_slider', null, WPBAKERY_ADDONS_PATH.'/inc/simple-slider.php');
     } // addAddons()
 
     /** Remove some WPBakery addons. */
@@ -96,6 +104,7 @@
     {
       add_shortcode('empty_space', [$this, 'addonEmptySpaceRender']);
       add_shortcode('share_social_medias', [$this, 'addonShareOnSocialMediasRender']);
+      add_shortcode('simple_slider', [$this, 'addonSimpleSliderRender']);
     } // registerShortcodes()
 
     function addonEmptySpaceRender($atts, $content = null)
@@ -129,6 +138,34 @@
 
       return getAddonView('views/addons-render/share-social-medias.php', $atts);
     }
+
+    function addonSimpleSliderRender($atts, $content = null)
+    {
+      $atts = shortcode_atts([
+        'items_320px' => '',
+        'items_480px' => '',
+        'items_640px' => '',
+        'items_768px' => '',
+        'items_1024px' => '',
+        'items_1280px' => '',
+        'items_1600px' => '',
+        'items_1920px' => '',
+        'content' => $content,
+      ], $atts);
+
+      $atts['id'] = strtolower(wp_generate_password(24, false, false));
+
+      var_dump($atts);
+
+      preg_match_all('#'.get_shortcode_regex().'#', $content, $matches);
+      $atts['shortcodes'] = $matches;
+
+      return getAddonView('views/addons-render/simple-slider.php', $atts);
+    } // addonEmptySpaceRender()
   }
 
   $WPBakery_addons = new WPBakery_addons();
+
+	if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
+    class WPBakeryShortCode_simple_slider extends WPBakeryShortCodesContainer {}
+	}
