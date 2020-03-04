@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.2
+ * Version: 1.3
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -153,15 +153,25 @@
         'content' => $content,
       ], $atts);
 
-      $atts['id'] = strtolower(wp_generate_password(24, false, false));
+      // Generate responsive behaviour
+      $responsive = [];
+      $sizes = [0, 320, 480, 640, 728, 1024, 1280, 1600, 1920];
 
-      var_dump($atts);
+      for ($i = 0 ; $i < count($sizes) ; $i++)
+      {
+        if ($atts['items_'.$sizes[$i].'px'])
+          $responsive[$sizes[$i - 1]]['items'] = $atts['items_'.$sizes[$i].'px'];
+
+      }
+
+      $atts['responsive'] = json_encode($responsive);
+      $atts['id'] = strtolower(wp_generate_password(24, false, false));
 
       preg_match_all('#'.get_shortcode_regex().'#', $content, $matches);
       $atts['shortcodes'] = $matches;
 
       return getAddonView('views/addons-render/simple-slider.php', $atts);
-    } // addonEmptySpaceRender()
+    } // addonSimpleSliderRender()
   }
 
   $WPBakery_addons = new WPBakery_addons();

@@ -21,7 +21,6 @@
 				'description' => __('Number of items to show under 320px', 'wpbakery-addons'),
   			'param_name' => 'items_320px',
   			'group' => 'General',
-        'value' => '1',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -30,7 +29,6 @@
 				'description' => __('Number of items to show under 480px', 'wpbakery-addons'),
   			'param_name' => 'items_480px',
   			'group' => 'General',
-        'value' => '1',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -39,7 +37,6 @@
 				'description' => __('Number of items to show under 640px', 'wpbakery-addons'),
   			'param_name' => 'items_640px',
   			'group' => 'General',
-        'value' => '2',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -48,7 +45,6 @@
 				'description' => __('Number of items to show under 768px', 'wpbakery-addons'),
   			'param_name' => 'items_768px',
   			'group' => 'General',
-        'value' => '2',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -57,7 +53,6 @@
 				'description' => __('Number of items to show under 1024px', 'wpbakery-addons'),
   			'param_name' => 'items_1024px',
   			'group' => 'General',
-        'value' => '3',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -66,7 +61,6 @@
 				'description' => __('Number of items to show under 1280px', 'wpbakery-addons'),
   			'param_name' => 'items_1280px',
   			'group' => 'General',
-        'value' => '3',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -75,7 +69,6 @@
 				'description' => __('Number of items to show under 1600px', 'wpbakery-addons'),
   			'param_name' => 'items_1600px',
   			'group' => 'General',
-        'value' => '4',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		],
   		[
@@ -84,7 +77,6 @@
 				'description' => __('Number of items to show under 1920px', 'wpbakery-addons'),
   			'param_name' => 'items_1920px',
   			'group' => 'General',
-        'value' => '4',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
   		]
   	]
