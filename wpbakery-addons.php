@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.3
+ * Version: 1.4
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -150,18 +150,21 @@
         'items_1280px' => '',
         'items_1600px' => '',
         'items_1920px' => '',
+        'display_nav' => '',
+        'nav_color' => '',
+        'nav_size' => '40px',
+        'display_dots' => '',
         'content' => $content,
       ], $atts);
 
       // Generate responsive behaviour
       $responsive = [];
-      $sizes = [0, 320, 480, 640, 728, 1024, 1280, 1600, 1920];
+      $sizes = [0, 320, 480, 640, 768, 1024, 1280, 1600, 1920];
 
       for ($i = 0 ; $i < count($sizes) ; $i++)
       {
-        if ($atts['items_'.$sizes[$i].'px'])
+        if (array_key_exists('items_'.$sizes[$i].'px', $atts))
           $responsive[$sizes[$i - 1]]['items'] = $atts['items_'.$sizes[$i].'px'];
-
       }
 
       $atts['responsive'] = json_encode($responsive);

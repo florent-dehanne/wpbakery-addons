@@ -15,6 +15,7 @@
 		'category' => 'WPBakery Addons',
 		'js_view' => 'VcColumnView',
   	'params' => [
+			// General
   		[
   			'type' => 'textfield',
   			'heading' => __('Items under 320px', 'wpbakery-addons'),
@@ -78,6 +79,38 @@
   			'param_name' => 'items_1920px',
   			'group' => 'General',
 				'edit_field_class' => 'vc_col-md-6 simple-slider-backend-column',
-  		]
+  		],
+
+			// Navigation
+  		[
+  			'type' => 'checkbox',
+  			'heading' => __('Display nav', 'wpbakery-addons'),
+  			'param_name' => 'display_nav',
+  			'group' => 'Navigation',
+        'value' => 1
+  		],
+  		[
+  			'type' => 'textfield',
+  			'heading' => __('Navigation size', 'wpbakery-addons'),
+				'description' => __('Enter the size of arrows in px (ex: 20px)', 'wpbakery-addons'),
+  			'param_name' => 'nav_size',
+  			'group' => 'Navigation',
+        'value' => ''
+  		],
+  		[
+  			'type' => 'colorpicker',
+  			'heading' => __('Navigation color', 'wpbakery-addons'),
+				'description' => __('Set the color of arrows.', 'wpbakery-addons'),
+  			'param_name' => 'nav_color',
+  			'group' => 'Navigation',
+        'value' => ''
+  		],
+  		[
+  			'type' => 'checkbox',
+  			'heading' => __('Display dots', 'wpbakery-addons'),
+  			'param_name' => 'display_dots',
+  			'group' => 'Navigation',
+        'value' => 1
+  		],
   	]
   ];

@@ -28,3 +28,28 @@
 @media (min-width: 1025px) {
   .empty-space-desktop { display: block; }
 }
+
+
+/** Simple slider addon */
+.simple-slider.owl-theme { padding-left: 40px; padding-right: 40px; }
+
+.simple-slider.owl-theme .wpb_button,
+.simple-slider.owl-theme .wpb_content_element,
+.simple-slider.owl-theme ul.wpb_thumbnails-fluid>li {
+  margin: 0;
+}
+
+.simple-slider.owl-theme .owl-nav { margin: 0; }
+.simple-slider.owl-theme .owl-nav [class*=owl-] {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  z-index: 99;
+}
+.simple-slider.owl-theme .owl-nav [class*=owl-]:hover {
+  background: none;
+}
+.simple-slider.owl-theme .owl-nav button.owl-prev { left: 0; text-align: left; }
+.simple-slider.owl-theme .owl-nav button.owl-next { right: 0; text-align: right; }

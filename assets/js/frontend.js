@@ -1,5 +1,8 @@
 jQuery(function($) {
 
+	// Fix to force target blank for social icons module
+	$('#mega_social_icons a[href^="http"]').attr('target','_blank');
+
   /* Share social medias */
   $('.share-social-medias').on('click', 'a', function(e) {
     e.preventDefault();
@@ -16,8 +19,8 @@ jQuery(window).load(function() {
       items: 1,
       loop: true,
       margin: 10,
-      nav: false,
-      dots: false,
+      nav: carousel.data('nav'),
+      dots: carousel.data('dots'),
       responsive: carousel.data('responsive')
     });
   });
