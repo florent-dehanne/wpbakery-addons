@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.4
+ * Version: 1.5
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -72,6 +72,7 @@
       vc_lean_map('empty_space', null, WPBAKERY_ADDONS_PATH.'/inc/empty-space.php');
       vc_lean_map('share_social_medias', null, WPBAKERY_ADDONS_PATH.'/inc/share-social-medias.php');
       vc_lean_map('simple_slider', null, WPBAKERY_ADDONS_PATH.'/inc/simple-slider.php');
+      vc_lean_map('anchor', null, WPBAKERY_ADDONS_PATH.'/inc/anchor.php');
     } // addAddons()
 
     /** Remove some WPBakery addons. */
@@ -105,6 +106,7 @@
       add_shortcode('empty_space', [$this, 'addonEmptySpaceRender']);
       add_shortcode('share_social_medias', [$this, 'addonShareOnSocialMediasRender']);
       add_shortcode('simple_slider', [$this, 'addonSimpleSliderRender']);
+      add_shortcode('anchor', [$this, 'addonAnchorRender']);
     } // registerShortcodes()
 
     function addonEmptySpaceRender($atts, $content = null)
@@ -175,6 +177,15 @@
 
       return getAddonView('views/addons-render/simple-slider.php', $atts);
     } // addonSimpleSliderRender()
+
+    function addonAnchorRender($atts, $content = null)
+    {
+      $atts = shortcode_atts([
+        'id' => ''
+      ], $atts);
+
+      return getAddonView('views/addons-render/anchor.php', $atts);
+    } // addonEmptySpaceRender()
   }
 
   $WPBakery_addons = new WPBakery_addons();
