@@ -105,12 +105,31 @@
   			'group' => 'Navigation',
         'value' => ''
   		],
+
+			// Dots
   		[
   			'type' => 'checkbox',
   			'heading' => __('Display dots', 'wpbakery-addons'),
   			'param_name' => 'display_dots',
-  			'group' => 'Navigation',
+  			'group' => 'Dots',
         'value' => 1
   		],
+
+			// Autoplay
+  		[
+  			'type' => 'checkbox',
+  			'heading' => __('Activate autoplay', 'wpbakery-addons'),
+  			'param_name' => 'autoplay',
+  			'group' => 'Autoplay',
+        'value' => 1
+  		],
+  		[
+  			'type' => 'textfield',
+  			'heading' => __('Autoplay timer', 'wpbakery-addons'),
+				'description' => __('Enter delay between each images in seconds', 'wpbakery-addons'),
+  			'param_name' => 'autoplay_timeout',
+  			'group' => 'Autoplay',
+        'value' => ''
+  		]
   	]
   ];

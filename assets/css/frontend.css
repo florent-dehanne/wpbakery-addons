@@ -31,7 +31,7 @@
 
 
 /** Simple slider addon */
-.simple-slider.owl-theme { padding-left: 40px; padding-right: 40px; }
+.simple-slider.owl-theme[data-nav="1"] { padding-left: 40px; padding-right: 40px; }
 
 .simple-slider.owl-theme .wpb_button,
 .simple-slider.owl-theme .wpb_content_element,

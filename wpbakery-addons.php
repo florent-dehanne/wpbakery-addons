@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.5
+ * Version: 1.6
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -144,18 +144,20 @@
     function addonSimpleSliderRender($atts, $content = null)
     {
       $atts = shortcode_atts([
-        'items_320px' => '',
-        'items_480px' => '',
-        'items_640px' => '',
-        'items_768px' => '',
-        'items_1024px' => '',
-        'items_1280px' => '',
-        'items_1600px' => '',
-        'items_1920px' => '',
-        'display_nav' => '',
+        'items_320px' => '1',
+        'items_480px' => '1',
+        'items_640px' => '1',
+        'items_768px' => '1',
+        'items_1024px' => '1',
+        'items_1280px' => '1',
+        'items_1600px' => '1',
+        'items_1920px' => '1',
+        'display_nav' => '0',
         'nav_color' => '',
         'nav_size' => '40px',
         'display_dots' => '',
+        'autoplay' => false,
+        'autoplay_timeout' => 0,
         'content' => $content,
       ], $atts);
 

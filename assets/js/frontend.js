@@ -15,13 +15,17 @@ jQuery(window).load(function() {
   /* Simple slider */
   jQuery('.simple-slider').each(function() {
     var carousel = jQuery(this);
+
     carousel.owlCarousel({
       items: 1,
       loop: true,
       margin: 10,
       nav: carousel.data('nav'),
       dots: carousel.data('dots'),
-      responsive: carousel.data('responsive')
+      responsive: carousel.data('responsive'),
+			autoplay: carousel.data('autoplay'),
+      autoplayTimeout: (carousel.data('autoplay-timeout') ? parseInt(carousel.data('autoplay-timeout')) * 1000 : 0),
+      autoplayHoverPause: true
     });
   });
 });
