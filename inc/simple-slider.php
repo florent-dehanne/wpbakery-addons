@@ -130,6 +130,13 @@
   			'param_name' => 'autoplay_timeout',
   			'group' => 'Autoplay',
         'value' => ''
+  		],
+  		[
+  			'type' => 'checkbox',
+  			'heading' => __('Pause slider on hover', 'wpbakery-addons'),
+  			'param_name' => 'autoplay_hover_pause',
+  			'group' => 'Autoplay',
+        'value' => 1
   		]
   	]
   ];

@@ -25,7 +25,7 @@ jQuery(window).load(function() {
       responsive: carousel.data('responsive'),
 			autoplay: carousel.data('autoplay'),
       autoplayTimeout: (carousel.data('autoplay-timeout') ? parseInt(carousel.data('autoplay-timeout')) * 1000 : 0),
-      autoplayHoverPause: true
+      autoplayHoverPause: carousel.data('autoplay-hover-pause')
     });
   });
 });

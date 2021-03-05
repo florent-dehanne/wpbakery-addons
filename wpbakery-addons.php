@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WPBakery addons
  * Description: Addons for WPBakery Page Builder.
- * Version: 1.6
+ * Version: 1.7
  * Author: Florent Dehanne
  * Author URI: https://florentdehanne.net
  * Text Domain: wpbakery-addons
@@ -158,7 +158,8 @@
         'display_dots' => '',
         'autoplay' => false,
         'autoplay_timeout' => 0,
-        'content' => $content,
+        'autoplay_hover_pause' => 0,
+        'content' => $content
       ], $atts);
 
       // Generate responsive behaviour
